@@ -1,6 +1,43 @@
 #include <iostream>
 
+using namespace std;
+
+class Node{
+    private:
+        int value;
+        int ptr_next;
+    public:
+        Node(int);
+        int get_value();
+        void set_value(int);
+        int get_ptrNext();
+        void set_ptrNext();
+};
+
+// Constructor
+
+Node::Node(int _value) {
+    value = _value;
+    ptr_next = NULL;
+}
+
+int Node::get_value(){
+    cout<<"MI valor:"<<value<<endl;
+    return 0;
+}
+
+void Node::set_value(int newValue) {
+    value = newValue;
+    // ver como cambiar en memoria esto
+}
+
 int main() {
-    std::cout << "Hello, World" << std::endl;
+    Node n1 = Node(15);
+    n1.get_value();
+
+    Node n2 = Node(1435);
+    n1.set_value(55);
+    n2.get_value();
+    n1.get_value();
     return 0;
 }
