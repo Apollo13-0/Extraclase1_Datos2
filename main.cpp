@@ -11,7 +11,9 @@ class Node{
         int get_value();
         void set_value(int);
         int get_ptrNext();
-        void set_ptrNext();
+        void set_ptrNext(int);
+//        void new() override;
+//        void delete() override;
 };
 
 // Constructor
@@ -31,6 +33,15 @@ void Node::set_value(int newValue) {
     // ver como cambiar en memoria esto
 }
 
+int Node::get_ptrNext() {
+    cout<<"Mi puntero;"<<ptr_next<<endl;
+    return 0;
+}
+
+void Node::set_ptrNext(int newPtr) {
+    ptr_next = newPtr;
+    // ver como cambiar en memoria
+}
 int main() {
     Node n1 = Node(15);
     n1.get_value();
