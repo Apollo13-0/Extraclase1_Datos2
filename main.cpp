@@ -2,6 +2,9 @@
 
 using namespace std;
 
+
+// ------------------- Clase NODO ----------
+
 class Node{
     private:
         int value;
@@ -42,6 +45,36 @@ void Node::set_ptrNext(int newPtr) {
     ptr_next = newPtr;
     // ver como cambiar en memoria
 }
+
+// ----------------------- Clase List ------------------
+
+class List{
+private:
+    Node head;
+    int size;
+
+public:
+    List();
+    int isEmpty();
+    void insert(int);
+    int find();
+    void set_ptrNext(int);
+//        void new() override;
+//        void delete() override;
+};
+
+/ Constructor
+
+List::List() {
+    *head = NULL;
+
+}
+
+int Node::get_value(){
+    cout<<"MI valor:"<<value<<endl;
+    return 0;
+}
+// ----------------------- MAIN ------------------------
 int main() {
     Node n1 = Node(15);
     n1.get_value();
