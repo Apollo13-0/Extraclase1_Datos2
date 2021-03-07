@@ -60,15 +60,15 @@ public:
     int isEmpty();
     void insert(int);
     int find();
-    void set_ptrNext(int);
+//    void set_ptrNext(int);
 //        void new() override;
 //        void delete() override;
 };
 
-/ Constructor
+// Constructor
 
 List::List() {
-    *head = NULL;
+    head = NULL;
     size = 0;
 }
 
