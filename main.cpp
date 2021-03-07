@@ -46,6 +46,8 @@ void Node::set_ptrNext(int newPtr) {
     // ver como cambiar en memoria
 }
 
+// agregar metodos setNext y getNExt
+
 // ----------------------- Clase List ------------------
 
 class List{
@@ -67,11 +69,15 @@ public:
 
 List::List() {
     *head = NULL;
-
+    size = 0;
 }
 
-int Node::get_value(){
-    cout<<"MI valor:"<<value<<endl;
+int List::isEmpty() {
+    if (size == 0){
+        cout<<"Esta vacio"<<endl;
+    } else{
+        cout<<"No essta vacio tiene"<<size<<"elementos"<<endl;
+    }
     return 0;
 }
 // ----------------------- MAIN ------------------------
