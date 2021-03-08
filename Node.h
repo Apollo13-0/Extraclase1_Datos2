@@ -9,13 +9,13 @@
 class Node {
     private:
         int value;
-        Node *ptr_next;
+        Node* ptr_next;
     public:
         Node(int);
         int get_value();
         void set_value(int);
         int get_ptrNext();
-        void set_ptrNext(int);
+        void set_ptrNext(Node*);
     //        void new() override;
     //        void delete() override;
 };

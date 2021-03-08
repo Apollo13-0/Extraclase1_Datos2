@@ -28,7 +28,7 @@ int Node::get_ptrNext() {
     return 0;
 }
 
-void Node::set_ptrNext(int newPtr) {
+void Node::set_ptrNext(Node* newPtr) {
     ptr_next = newPtr;
     // ver como cambiar en memoria
 }

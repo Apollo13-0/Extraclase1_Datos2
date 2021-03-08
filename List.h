@@ -10,7 +10,7 @@
 
 class List {
     private:
-        Node *head;
+        Node* head;
         int size;
 
     public:
