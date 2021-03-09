@@ -6,7 +6,22 @@
 #define EXTRACLASE1_DATOS2_COLLECTOR_H
 
 
+#include "Node.h"
+#include "CollectorNode.h"
+
 class Collector {
+
+    private:
+        int size;
+        CollectorNode* head;
+
+    public:
+        Collector();
+        bool isEmpty();
+        void find_memory();
+        void insert();
+        Node collector_delete();
+
 
 };
 

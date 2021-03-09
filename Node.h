@@ -14,10 +14,11 @@ class Node {
         Node(int);
         int get_value();
         void set_value(int);
-        int get_ptrNext();
-        void set_ptrNext(Node);
+        Node *get_ptrNext() const;
+        void set_ptrNext(Node *newPtr);
         void* operator new (size_t size) ;
         //void operator delete(int node);
+
 };
 
 #endif //EXTRACLASE1_DATOS2_NODE_H

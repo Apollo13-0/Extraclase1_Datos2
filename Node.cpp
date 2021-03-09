@@ -22,13 +22,12 @@ void Node::set_value(int newValue) {
     // ver como cambiar en memoria esto
 }
 
-int Node::get_ptrNext() {
-    cout<<"La direccion del siguente puntero es:"<<&ptr_next<<endl;
-    return 0;
+Node *Node::get_ptrNext() const{
+    return ptr_next;
 }
 
-void Node::set_ptrNext(Node newPtr) {
-    ptr_next = &newPtr;
+void Node::set_ptrNext(Node *newPtr) {
+    ptr_next = newPtr;
     // ver como cambiar en memoria
 }
 
