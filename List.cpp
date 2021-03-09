@@ -14,11 +14,35 @@ List::List() {
     size = 0;
 }
 
-int List::isEmpty() {
+bool List::isEmpty() {
     if (size == 0){
-        cout<<"Esta vacio"<<endl;
+        return true;
     } else{
-        cout<<"No essta vacio tiene"<<size<<"elementos"<<endl;
+        return false;
     }
-    return 0;
+}
+
+void List::insert(int data){
+    // pasarlo al new sobreescrito
+
+    if (!head){
+        //head = new_node;
+        if (!find_memory()){
+            Node tmp = Node(data);
+            head = &tmp;
+        } else {
+            //collector.use_ptr(direct);
+        }
+
+        // agregar logica de punteros
+    } else {
+        if (!find_memory()){
+            //collector.new_global()
+        } else {
+            //collector.use_ptr(direct)
+        }
+        //new_node->get_ptrNext() = &head;  // asignar la direc del head al nuevo numero
+        //head = new_node;
+    }
+
 }

@@ -10,12 +10,12 @@
 
 class List {
     private:
-        Node* head;
         int size;
+        Node* head;
 
     public:
         List();
-        int isEmpty();
+        bool isEmpty();
         void insert(int);
         int find();
     //    void set_ptrNext(int);

@@ -14,8 +14,7 @@ Node::Node(int _value) {
 }
 
 int Node::get_value(){
-    cout<<"MI valor:"<<value<<endl;
-    return 0;
+    return value;
 }
 
 void Node::set_value(int newValue) {
@@ -24,14 +23,25 @@ void Node::set_value(int newValue) {
 }
 
 int Node::get_ptrNext() {
-    cout<<"Mi puntero;"<<ptr_next<<endl;
+    cout<<"La direccion del siguente puntero es:"<<&ptr_next<<endl;
     return 0;
 }
 
-void Node::set_ptrNext(Node* newPtr) {
-    ptr_next = newPtr;
+void Node::set_ptrNext(Node newPtr) {
+    ptr_next = &newPtr;
     // ver como cambiar en memoria
 }
 
-// agregar metodos setNext y getNExt
-#include "Node.h"
+void* Node::operator new(size_t size) {
+//    if (find_memory()){
+//        //logica para usar el espacio en el collector
+//    } else {
+//        void *tmp = malloc(sizeof(size));
+//        return tmp;
+//    }
+}
+
+//void Node::operator delete(int node) {
+//
+//}
+

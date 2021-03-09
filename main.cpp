@@ -1,12 +1,9 @@
 #include <iostream>
 #include "Node.h"
+#include "List.h"
 
 using namespace std;
 
-
-class Collector{
-
-};
 // ----------------------- MAIN ------------------------
 int main() {
     Node n1 = Node(15);
@@ -16,5 +13,9 @@ int main() {
     n1.set_value(55);
     n2.get_value();
     n1.get_value();
+    n1.get_ptrNext();
+
+    List l1 = List();
+    l1.isEmpty();
     return 0;
 }

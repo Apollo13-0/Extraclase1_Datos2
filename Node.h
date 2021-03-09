@@ -15,9 +15,10 @@ class Node {
         int get_value();
         void set_value(int);
         int get_ptrNext();
-        void set_ptrNext(Node*);
-    //        void new() override;
-    //        void delete() override;
+        void set_ptrNext(Node);
+        void* operator new (size_t size) ;
+        //void operator delete(int node);
 };
 
 #endif //EXTRACLASE1_DATOS2_NODE_H
+//
