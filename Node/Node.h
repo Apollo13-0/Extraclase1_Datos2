@@ -7,19 +7,26 @@
 
 
 class Node {
+
     private:
+
         int value;
-        Node* ptr_next;
+        Node *ptr_next;
+
     public:
-        Node(int);
+
+        Node();
+
         int get_value();
         void set_value(int);
+
         Node *get_ptrNext() const;
-        void set_ptrNext(Node *newPtr);
-        void* operator new (size_t size) ;
+        void set_ptrNext(Node newPtr);
+
+        //void* operator new(size_t size, int ele);
         //void operator delete(int node);
 
 };
 
-#endif //EXTRACLASE1_DATOS2_NODE_H
-//
+#endif
+//EXTRACLASE1_DATOS2_NODE_H

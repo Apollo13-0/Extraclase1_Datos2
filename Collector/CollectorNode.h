@@ -6,7 +6,7 @@
 #define EXTRACLASE1_DATOS2_COLLECTORNODE_H
 
 
-#include "Node.h"
+#include "../Node/Node.h"
 
 class CollectorNode {
     private:

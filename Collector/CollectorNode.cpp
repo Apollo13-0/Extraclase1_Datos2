@@ -4,10 +4,10 @@
 
 #include "CollectorNode.h"
 
-CollectorNode::CollectorNode() {
-    node_deleted;
-    collector_next = NULL;
-}
+//CollectorNode::CollectorNode() {
+//    node_deleted;
+//    collector_next = NULL;
+//}
 
 CollectorNode *CollectorNode::getCollectorNext() const {
     return collector_next;

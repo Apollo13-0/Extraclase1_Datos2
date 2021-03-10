@@ -3,13 +3,13 @@
 //
 
 #include "Collector.h"
-
-Collector::Collector() {
-    head = NULL;
-    size = 0;
-
-
-}
+//
+//Collector::Collector() {
+//    head = NULL;
+//    size = 0;
+//
+//
+//}
 
 bool Collector::isEmpty() {
     if (size == 0){
@@ -27,6 +27,4 @@ void Collector::insert() {
 
 }
 
-Node Collector::collector_delete() {
-    return Node(0);
-}
+
