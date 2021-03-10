@@ -6,6 +6,8 @@
 
 #include <iostream>
 #include "Node.h"
+
+
 using namespace std;
 
 
@@ -40,14 +42,23 @@ void Node::setValue(int value) {
     Node::value = value;
 }
 
-//void *Node::operator new(size_t size) {
-////    if (free_node.find_memory()){
-////        void *ptr = NULL;
-////        ptr = malloc(size);
-////        return ptr;
-////    } else {
-////        return free_node.collector_delete();
-////    }
-//}
-
+void *Node::operator new(size_t size) {
+    // hacer llegar el collector
+    cout << "sobrecargando..." << size << endl;
+    void *p =malloc(size);
+    return p;
+//    Collector *free_node = Collector::getInstance();
+//
+//    if (free_node->find_memory()){
+//        cout << "creeando espacio"<<endl;
+//        void *ptr = NULL;
+//        ptr = malloc(size);
+//        return ptr;
+//    }
+//    else {
+//        cout << "reciclando"<< endl;
+//        Node tmp = free_node->collector_delete();
+//        return &tmp;
+//    }
+}
 

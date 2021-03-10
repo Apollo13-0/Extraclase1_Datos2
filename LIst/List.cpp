@@ -42,12 +42,12 @@ void List::insert(int data){
     // pasarlo al new sobreescrito
     if (is_empty()){
         Node *tmp = new Node(data);
-        head = tmp;
+        this->head = tmp;
     } else {
         Node *new_node = new Node(data);
 
         new_node->setPtrNext(head);
-        head = new_node;
+        this->head = new_node;
     }
     size++;
 }

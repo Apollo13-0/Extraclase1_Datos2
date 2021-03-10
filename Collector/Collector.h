@@ -6,17 +6,24 @@
 #define EXTRACLASE1_DATOS2_COLLECTOR_H
 
 
-#include "../Node/Node.h"
-#include "../Collector/CollectorNode.h"
+#include "CollectorNode.h"
+#include <iostream>
 
 class Collector {
 
     private:
         CollectorNode *head;
         int size;
+        static Collector *instance;
+
+    protected:
+        Collector();
+        Collector(Collector const&);
+        Collector& operator=(Collector const&);
     public:
 
-        Collector();
+        //Collector();
+        static Collector *getInstance();
 
         bool isEmpty();
 
@@ -37,6 +44,6 @@ class Collector {
 
 
 };
-
+Collector* Collector::instance=NULL;
 
 #endif //EXTRACLASE1_DATOS2_COLLECTOR_H

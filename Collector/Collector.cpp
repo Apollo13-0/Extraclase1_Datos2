@@ -3,6 +3,7 @@
 //
 
 #include "Collector.h"
+#include "../Collector/CollectorNode.h"
 #include <iostream>
 
 using namespace std;
@@ -70,6 +71,13 @@ Node Collector::collector_delete() {
         tmp2.setPtrNext(NULL);
         return tmp2;
     }
+}
+
+Collector *Collector::getInstance() {
+    if (instance == NULL) {
+        instance = new Collector();
+    }
+    return instance;
 }
 
 

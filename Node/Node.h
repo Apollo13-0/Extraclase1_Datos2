@@ -6,8 +6,6 @@
 #define EXTRACLASE1_DATOS2_NODE_H
 
 
-#include "../Collector/Collector.h"
-
 class Node {
 
 private:
@@ -17,14 +15,9 @@ private:
 
 public:
 
+
     Node();
     Node(int);
-
-    //int get_value();
-    //void set_value(int);
-
-    //Node* get_ptrNext();
-    // void set_ptrNext(Node new_ptr);
 
     void print();
 
@@ -36,9 +29,8 @@ public:
 
     void setValue(int value);
 
-//    void* operator new(size_t size);
-    //void operator delete(Node delete_ptr);
-
+    void *operator new(size_t size);
+    //void operator delete(void *delete_ptr);
 };
 
 #endif
