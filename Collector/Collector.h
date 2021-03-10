@@ -12,8 +12,8 @@
 class Collector {
 
     private:
+        CollectorNode *head;
         int size;
-        CollectorNode* head;
 
     public:
         Collector();

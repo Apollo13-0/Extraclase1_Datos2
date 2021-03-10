@@ -11,18 +11,22 @@
 class CollectorNode {
     private:
         Node node_deleted;
-        CollectorNode* collector_next;
+        CollectorNode *collector_next;
 
     public:
+
         CollectorNode();
+        CollectorNode(Node node);
 
         CollectorNode *getCollectorNext() const;
 
         void setCollectorNext(CollectorNode *collectorNext);
 
-        Node &getNodeDeleted() const;
+        Node getNodeDeleted() const;
 
-        void setNodeDeleted(const Node &nodeDeleted);
+        void setNodeDeleted(Node nodeDeleted);
+
+        void print();
 
 };
 

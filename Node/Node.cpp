@@ -8,34 +8,42 @@
 #include "Node.h"
 using namespace std;
 
-// Constructor
+
 Node::Node() {
     value = NULL;
     ptr_next = NULL;
-    cout<<"node1"<<endl;
 }
 
-int Node::get_value(){
-    //cout << "nodo creado: "<<value<< endl;
-    return value;
+Node::Node(int data) {
+    value = data;
+    ptr_next = NULL;
 }
 
-void Node::set_value(int newValue) {
-    value = newValue;
-    // ver como cambiar en memoria esto
+void Node::print() {
+    cout << "Nodo:  " << value << "    Direccion    " << this << "  Sigueinte: " << ptr_next << endl;
 }
 
-Node *Node::get_ptrNext() const{
+Node *Node::getPtrNext() const {
     return ptr_next;
 }
 
-void Node::set_ptrNext(Node newPtr) {
-    ptr_next = &newPtr;
-    // ver como cambiar en memoria
+void Node::setPtrNext(Node *ptrNext) {
+    ptr_next = ptrNext;
 }
 
-//void *Node::operator new(size_t size, int ele) {
+int Node::getValue() const {
+    return value;
+}
+
+void Node::setValue(int value) {
+    Node::value = value;
+}
 //
+//void *Node::operator new(size_t size) {
+//    if (true){
+//        Node *tmp = new Node();
+//        return tmp;
+//    }
 //}
 
 

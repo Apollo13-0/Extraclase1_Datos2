@@ -8,17 +8,31 @@
 
 #include "../Node/Node.h"
 
-class List {
-    private:
-        int size;
-        Node *head;
 
-    public:
-        List();
-        bool isEmpty();
-        void insert(int);
-        int find();
-        void print_list();
+class List {
+
+private:
+    Node *head;
+    int size;
+
+public:
+
+    List();
+
+    void insert(int);
+
+    bool is_empty();
+
+    void print_list();
+
+    Node *getHead() const;
+
+    void setHead(Node *head);
+
+    int getSize() const;
+
+    void setSize(int size);
+
 
 };
 

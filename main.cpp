@@ -21,13 +21,10 @@ int main() {
 //    n1.get_ptrNext();
 
     List l1 = List();
-    cout<<"main1"<<endl;
     l1.insert(22);
     l1.insert(12);
     l1.insert(45);
-    cout<<"main2"<<endl;
     l1.print_list();
-    cout<<"main3"<<endl;
 
     return 0;
 }
