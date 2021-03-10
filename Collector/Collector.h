@@ -7,20 +7,33 @@
 
 
 #include "../Node/Node.h"
-#include "CollectorNode.h"
+#include "../Collector/CollectorNode.h"
 
 class Collector {
 
     private:
         CollectorNode *head;
         int size;
-
     public:
+
         Collector();
+
         bool isEmpty();
-        void find_memory();
-        void insert();
+
+        bool find_memory();
+
+        void insert(Node);
+
         Node collector_delete();
+
+        CollectorNode *getHead() const;
+
+        void setHead(CollectorNode *head);
+
+        int getSize() const;
+
+        void setSize(int size);
+
 
 
 };

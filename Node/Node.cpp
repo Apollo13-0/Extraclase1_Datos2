@@ -17,6 +17,7 @@ Node::Node() {
 Node::Node(int data) {
     value = data;
     ptr_next = NULL;
+
 }
 
 void Node::print() {
@@ -38,12 +39,15 @@ int Node::getValue() const {
 void Node::setValue(int value) {
     Node::value = value;
 }
-//
+
 //void *Node::operator new(size_t size) {
-//    if (true){
-//        Node *tmp = new Node();
-//        return tmp;
-//    }
+////    if (free_node.find_memory()){
+////        void *ptr = NULL;
+////        ptr = malloc(size);
+////        return ptr;
+////    } else {
+////        return free_node.collector_delete();
+////    }
 //}
 
 

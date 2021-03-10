@@ -6,6 +6,7 @@
 #define EXTRACLASE1_DATOS2_NODE_H
 
 
+#include "../Collector/Collector.h"
 
 class Node {
 
@@ -35,7 +36,7 @@ public:
 
     void setValue(int value);
 
-//        void* operator new(size_t size);
+//    void* operator new(size_t size);
     //void operator delete(Node delete_ptr);
 
 };

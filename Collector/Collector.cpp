@@ -3,13 +3,14 @@
 //
 
 #include "Collector.h"
-//
-//Collector::Collector() {
-//    head = NULL;
-//    size = 0;
-//
-//
-//}
+#include <iostream>
+
+using namespace std;
+
+Collector::Collector() {
+    head = NULL;
+    size = 0;
+}
 
 bool Collector::isEmpty() {
     if (size == 0){
@@ -19,12 +20,56 @@ bool Collector::isEmpty() {
     }
 }
 
-void Collector::find_memory() {
+bool Collector::find_memory() {
+    if (isEmpty()){
+        return true;
+        // logica para incertar un nuevo nodo NEW GLOBAL
+    } else {
+        return false;
+        // usar direccion para almaceanr objeto
 
+        // eliminar de la lista
+    }
 }
 
-void Collector::insert() {
+void Collector::insert(Node data) {
+    CollectorNode *tmp = new CollectorNode(data);
+    if (isEmpty()){
+        head = tmp;
+    } else {
+        tmp->setCollectorNext(head);
+        head = tmp;
+    }
+    size++;
+}
 
+CollectorNode *Collector::getHead() const {
+    return head;
+}
+
+void Collector::setHead(CollectorNode *head) {
+    Collector::head = head;
+}
+
+int Collector::getSize() const {
+    return size;
+}
+
+void Collector::setSize(int size) {
+    Collector::size = size;
+}
+
+Node Collector::collector_delete() {
+    if (isEmpty()){
+        cout << "No hay elementos por eliminar en Collector"<<endl;
+    } else {
+        CollectorNode *tmp = getHead();
+        head = tmp->getCollectorNext();
+        tmp->setCollectorNext(NULL);
+        Node tmp2 = tmp->getNodeDeleted();
+        tmp2.setPtrNext(NULL);
+        return tmp2;
+    }
 }
 
 
