@@ -5,6 +5,7 @@
 #ifndef EXTRACLASE1_DATOS2_NODE_H
 #define EXTRACLASE1_DATOS2_NODE_H
 
+#include <stddef.h>
 
 class Node {
 

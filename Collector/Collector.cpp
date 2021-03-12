@@ -3,7 +3,6 @@
 //
 
 #include "Collector.h"
-#include "../Collector/CollectorNode.h"
 #include <iostream>
 
 using namespace std;
@@ -68,6 +67,7 @@ void Collector::setSize(int size) {
 Node Collector::collector_delete() {
     if (isEmpty()){
         cout << "No hay elementos por eliminar en Collector"<<endl;
+
     } else {
         Node *tmp3 = head;
         head = tmp3->getPtrNext();

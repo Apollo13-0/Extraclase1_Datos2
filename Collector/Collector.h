@@ -44,6 +44,7 @@ class Collector {
 
 
 };
+
 Collector* Collector::instance=NULL;
 
 #endif //EXTRACLASE1_DATOS2_COLLECTOR_H

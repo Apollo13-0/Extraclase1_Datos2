@@ -9,23 +9,22 @@ int main() {
     int ele;
     int dim;
     int pos;
-    //cout << "Agrega un elemento por la cabeza: " << endl;
-    //cin >> ele;
-//    Node n1 = Node(ele);
-//    n1.get_value();
-//
-//    Node n2 = Node(1435);
-//    n1.set_value(55);
-//    n2.get_value();
-//    n1.get_value();
-//    n1.get_ptrNext();
+    cout << "Agrega un elemento por la cabeza: " << endl;
+    cin >> ele;
 
     List l1 = List();
-    l1.insert(22);
-    l1.insert(12);
-    l1.insert(45);
+    l1.insert(ele);
+
+    cout << "Agrega un elemento por la cabeza: " << endl;
+    cin >> ele;
+    l1.insert(ele);
+    cout << "Agrega un elemento por la cabeza: " << endl;
+    cin >> ele;
+    l1.insert(ele);
     l1.print_list();
-    l1.delete_list(12);
+    cout << "Eliminar un elemento por la cabeza: " << endl;
+    cin >> ele;
+    l1.delete_list(ele);
 
     return 0;
 }
