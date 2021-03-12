@@ -29,8 +29,8 @@ public:
 
     void setValue(int value);
 
-    void *operator new(size_t size);
-    //void operator delete(void *delete_ptr);
+    //void* operator new(size_t size);
+    void operator delete(void *delete_ptr);
 };
 
 #endif

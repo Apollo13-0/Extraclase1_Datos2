@@ -12,7 +12,7 @@
 class Collector {
 
     private:
-        CollectorNode *head;
+        Node *head;
         int size;
         static Collector *instance;
 
@@ -29,7 +29,7 @@ class Collector {
 
         bool find_memory();
 
-        void insert(Node);
+        void insert(Node pointer);
 
         Node collector_delete();
 

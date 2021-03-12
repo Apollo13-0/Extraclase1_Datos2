@@ -23,6 +23,8 @@ public:
 
     bool is_empty();
 
+    bool find(int value);
+
     void print_list();
 
     Node *getHead() const;
@@ -32,6 +34,9 @@ public:
     int getSize() const;
 
     void setSize(int size);
+
+    void delete_list(int value);
+
 
 
 };

@@ -25,6 +25,7 @@ int main() {
     l1.insert(12);
     l1.insert(45);
     l1.print_list();
+    l1.delete_list(12);
 
     return 0;
 }

@@ -64,3 +64,39 @@ void List::print_list() {
         }
     }
 }
+
+bool List::find(int value) {
+    Node *tmp = head;
+    bool result = false;
+    if (!head){
+        result = false;
+        return result;
+    } else {
+        while (tmp != NULL){
+            if (tmp->getValue() == value){
+                result = true;
+                break;
+            } else {
+                tmp = tmp->getPtrNext();
+                result = false;
+            }
+        }
+        return result;
+    }
+}
+
+void List::delete_list(int value) {
+    if (this->find(value)){
+        Node *tmp = head;
+        while (tmp != NULL){
+            if (tmp->getValue() == value){
+                tmp->operator delete(this);
+                cout << "eliminado:  " << value << endl;
+                break;
+            } else {
+                tmp = tmp->getPtrNext();
+            }
+        }
+    }
+
+}

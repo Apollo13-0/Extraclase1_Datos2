@@ -34,23 +34,28 @@ bool Collector::find_memory() {
 }
 
 void Collector::insert(Node data) {
-    CollectorNode *tmp = new CollectorNode(data);
+    //CollectorNode *tmp = new CollectorNode(data);
+
     if (isEmpty()){
-        head = tmp;
+        head = &data;
+        cout << "collector insert is empty" << endl;
     } else {
-        tmp->setCollectorNext(head);
-        head = tmp;
+        data.setPtrNext(head);
+        head = &data;
+        cout << "collector insert new head" << endl;
+//        tmp->setCollectorNext(head);
+//        head = tmp;
     }
     size++;
 }
 
-CollectorNode *Collector::getHead() const {
-    return head;
-}
-
-void Collector::setHead(CollectorNode *head) {
-    Collector::head = head;
-}
+//CollectorNode *Collector::getHead() const {
+//    return head;
+//}
+//
+//void Collector::setHead(CollectorNode *head) {
+//    Collector::head = head;
+//}
 
 int Collector::getSize() const {
     return size;
@@ -64,12 +69,18 @@ Node Collector::collector_delete() {
     if (isEmpty()){
         cout << "No hay elementos por eliminar en Collector"<<endl;
     } else {
-        CollectorNode *tmp = getHead();
-        head = tmp->getCollectorNext();
-        tmp->setCollectorNext(NULL);
-        Node tmp2 = tmp->getNodeDeleted();
-        tmp2.setPtrNext(NULL);
-        return tmp2;
+        Node *tmp3 = head;
+        head = tmp3->getPtrNext();
+        tmp3->setPtrNext(NULL);
+        return *tmp3;
+
+//        CollectorNode *tmp = getHead();
+//        head = tmp->getCollectorNext();
+//        tmp->setCollectorNext(NULL);
+//
+//        Node tmp2 = tmp->getNodeDeleted();
+//        tmp2.setPtrNext(NULL);
+//        return tmp2;
     }
 }
 
