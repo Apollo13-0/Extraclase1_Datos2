@@ -6,6 +6,7 @@
 #define EXTRACLASE1_DATOS2_NODE_H
 
 #include <stddef.h>
+//#include "../Collector/Collector.h"
 
 class Node {
 

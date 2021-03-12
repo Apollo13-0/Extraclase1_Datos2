@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include "Node.h"
-//#include "../Collector/Collector.h"
+#include "../Collector/Collector.h"
 
 
 using namespace std;
@@ -61,11 +61,12 @@ void Node::setValue(int value) {
 //}
 
 void Node::operator delete(void *delete_ptr) {
-//    Collector *free_node = Collector::getInstance();
-//    if (free_node->find_memory()){
-//        //cout<<delete_ptr<<endl;
-//        //free_node->insert(delete_ptr)
-//    }
+    Collector *free_node = new Collector();
+    cout<<delete_ptr<<endl;
+    if (free_node->find_memory()){
+        cout<<delete_ptr<<endl;
+        free_node->insert(delete_ptr);
+    }
     cout<<"delete"<<endl;
 
 }

@@ -32,15 +32,16 @@ bool Collector::find_memory() {
     }
 }
 
-void Collector::insert(Node data) {
+void Collector::insert(void *data) {
     //CollectorNode *tmp = new CollectorNode(data);
 
     if (isEmpty()){
-        head = &data;
+
+        //head = data;
         cout << "collector insert is empty" << endl;
     } else {
-        data.setPtrNext(head);
-        head = &data;
+        //data.setPtrNext(head);
+        //head = data;
         cout << "collector insert new head" << endl;
 //        tmp->setCollectorNext(head);
 //        head = tmp;
@@ -84,11 +85,11 @@ Node Collector::collector_delete() {
     }
 }
 
-Collector *Collector::getInstance() {
-    if (instance == NULL) {
-        instance = new Collector();
-    }
-    return instance;
-}
+//Collector *Collector::getInstance() {
+//    if (instance == nullptr) {
+//        instance = new Collector();
+//    }
+//    return instance;
+//}
 
 

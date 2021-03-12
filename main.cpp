@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Node/Node.h"
 #include "LIst/List.h"
-#include "Collector/Collector.h"
+
 
 using namespace std;
 

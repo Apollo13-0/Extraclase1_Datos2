@@ -90,8 +90,9 @@ void List::delete_list(int value) {
         Node *tmp = head;
         while (tmp != NULL){
             if (tmp->getValue() == value){
-                tmp->operator delete(this);
-                cout << "eliminado:  " << value << endl;
+                cout << "next de value:   "<< tmp<< endl;
+                tmp->operator delete(tmp);
+                cout << "eliminado:  " << value << "    "<< tmp <<endl;
                 break;
             } else {
                 tmp = tmp->getPtrNext();
