@@ -85,11 +85,11 @@ Node Collector::collector_delete() {
     }
 }
 
-//Collector *Collector::getInstance() {
+Collector &Collector::getInstance() {
 //    if (instance == nullptr) {
 //        instance = new Collector();
 //    }
-//    return instance;
-//}
+    return instance;
+}
 
 

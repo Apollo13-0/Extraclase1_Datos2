@@ -15,7 +15,8 @@ class Collector {
     private:
         Node *head;
         int size;
-        //static Collector *instance;
+        static Collector instance;
+        Collector();
 
 //    protected:
 //        Collector();
@@ -25,11 +26,11 @@ class Collector {
 //        Collector& operator=(Collector const&);
     public:
 
-//        Collector(Collector &other) = delete;
+        Collector(const Collector&) = delete;
 //        void operator=(const Collector &)=delete;
 
-        Collector();
-//        static Collector *getInstance();
+        //Collector();
+        static Collector& getInstance();
 
         bool isEmpty();
 
@@ -48,9 +49,9 @@ class Collector {
         void setSize(int size);
 
 
-
+    //Collector();
 };
 
-//Collector* Collector::collector_= nullptr;
+Collector Collector::instance;
 
 #endif //EXTRACLASE1_DATOS2_COLLECTOR_H

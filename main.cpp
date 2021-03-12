@@ -27,7 +27,6 @@ int main() {
     l1.print_list();
     cout << "Eliminar un elemento por la cabeza: " << endl;
     cin >> ele;
-    l1.delete_list(ele);
 
     return 0;
 }

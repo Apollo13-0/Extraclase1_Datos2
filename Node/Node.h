@@ -8,6 +8,10 @@
 #include <stddef.h>
 //#include "../Collector/Collector.h"
 
+using namespace std;
+
+class Collector;
+
 class Node {
 
 private:
@@ -31,7 +35,7 @@ public:
 
     void setValue(int value);
 
-    //void* operator new(size_t size);
+    void* operator new(size_t size);
     void operator delete(void *delete_ptr);
 };
 
