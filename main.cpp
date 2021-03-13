@@ -12,21 +12,51 @@ int main() {
     int ele;
     int dim;
     int pos;
-    cout << "Agrega un elemento por la cabeza: " << endl;
-    cin >> ele;
+
+    Collector c1 = Collector();
 
     List l1 = List();
-    l1.insert(ele);
 
     cout << "Agrega un elemento por la cabeza: " << endl;
     cin >> ele;
-    l1.insert(ele);
+    l1.insert(ele, c1);
+
     cout << "Agrega un elemento por la cabeza: " << endl;
     cin >> ele;
-    l1.insert(ele);
+    l1.insert(ele, c1);
+
+    cout << "Agrega un elemento por la cabeza: " << endl;
+    cin >> ele;
+    l1.insert(ele, c1);
+
+    //Imprimir lista
     l1.print_list();
+
+    //ELiminar un nodo
     cout << "Eliminar un elemento por la cabeza: " << endl;
     cin >> ele;
+
+    l1.delete_list(ele, c1);
+
+    cout << "Eliminar un elemento por la cabeza: " << endl;
+    cin >> ele;
+
+    l1.delete_list(ele, c1);
+    cout << "------------ Collector ------------" << endl;
+    c1.print_collector();
+
+    cout << "------------ Lista ------------" << endl;
+    //Imprimir lista
+    l1.print_list();
+
+    cout << "Agrega un elemento por la cabeza: " << endl;
+    cin >> ele;
+    l1.insert(ele, c1);
+
+    //Imprimir lista
+    l1.print_list();
+    cout << "------------ Collector ------------" << endl;
+    c1.print_collector();
 
     return 0;
 }

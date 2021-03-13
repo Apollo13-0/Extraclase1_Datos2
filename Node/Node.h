@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class Collector;
+//class Collector;
 
 class Node {
 
@@ -35,7 +35,7 @@ public:
 
     void setValue(int value);
 
-    void* operator new(size_t size);
+    //void* operator new(size_t size);
     void operator delete(void *delete_ptr);
 };
 

@@ -7,6 +7,7 @@
 
 
 #include "../Node/Node.h"
+#include "../Collector/Collector.h"
 
 
 class List {
@@ -19,7 +20,7 @@ public:
 
     List();
 
-    void insert(int);
+    void insert(int, Collector collector);
 
     bool is_empty();
 
@@ -35,7 +36,7 @@ public:
 
     void setSize(int size);
 
-    void delete_list(int value);
+    void delete_list(int value, Collector collector);
 
 
 

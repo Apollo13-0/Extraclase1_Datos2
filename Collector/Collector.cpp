@@ -23,28 +23,19 @@ bool Collector::isEmpty() {
 bool Collector::find_memory() {
     if (isEmpty()){
         return true;
-        // logica para incertar un nuevo nodo NEW GLOBAL
     } else {
         return false;
-        // usar direccion para almaceanr objeto
-
-        // eliminar de la lista
     }
 }
 
-void Collector::insert(void *data) {
-    //CollectorNode *tmp = new CollectorNode(data);
-
+void Collector::insert(Node* data) {
     if (isEmpty()){
-
-        //head = data;
-        cout << "collector insert is empty" << endl;
+        this->head = data;
+        cout << "collector insert is empty  " << head <<endl;
     } else {
-        //data.setPtrNext(head);
-        //head = data;
+        data->setPtrNext(head);
+        this->head = data;
         cout << "collector insert new head" << endl;
-//        tmp->setCollectorNext(head);
-//        head = tmp;
     }
     size++;
 }
@@ -66,30 +57,44 @@ void Collector::setSize(int size) {
 }
 
 Node Collector::collector_delete() {
-    if (isEmpty()){
-        cout << "No hay elementos por eliminar en Collector"<<endl;
-
-    } else {
-        Node *tmp3 = head;
-        head = tmp3->getPtrNext();
-        tmp3->setPtrNext(NULL);
-        return *tmp3;
-
-//        CollectorNode *tmp = getHead();
-//        head = tmp->getCollectorNext();
-//        tmp->setCollectorNext(NULL);
-//
-//        Node tmp2 = tmp->getNodeDeleted();
-//        tmp2.setPtrNext(NULL);
-//        return tmp2;
-    }
-}
-
-Collector &Collector::getInstance() {
-//    if (instance == nullptr) {
-//        instance = new Collector();
+    cout << "print delle   " << head << endl;
+    Node *tmp3 = head;
+    head = tmp3->getPtrNext();
+    tmp3->setPtrNext(NULL);
+    size--;
+    return *tmp3;
+//    if (isEmpty()){
+//        Node *tmp = new Node();
+//        size--;
+//        return *tmp;
+//    } else {
+//        Node *tmp3 = head;
+//        head = tmp3->getPtrNext();
+//        tmp3->setPtrNext(NULL);
+//        size--;
+//        return *tmp3;
 //    }
-    return instance;
 }
+
+void Collector::print_collector() {
+    Node *tmp = this->head;
+    cout << "print collecitor   " << this->head << endl;
+    if (isEmpty()){
+        cout<<"EL collector està vacìo"<<endl;
+    } else {
+        while (tmp != NULL){
+            tmp->print();
+            tmp = tmp->getPtrNext();
+        }
+    }
+
+}
+
+//Collector &Collector::getInstance() {
+////    if (instance == nullptr) {
+////        instance = new Collector();
+////    }
+//    return instance;
+//}
 
 

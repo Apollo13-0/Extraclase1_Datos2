@@ -6,17 +6,17 @@
 #define EXTRACLASE1_DATOS2_COLLECTOR_H
 
 
-//#include "CollectorNode.h"
 #include "../Node/Node.h"
 #include <iostream>
+
 
 class Collector {
 
     private:
         Node *head;
         int size;
-        static Collector instance;
-        Collector();
+//        static Collector instance;
+//        Collector();
 
 //    protected:
 //        Collector();
@@ -26,19 +26,21 @@ class Collector {
 //        Collector& operator=(Collector const&);
     public:
 
-        Collector(const Collector&) = delete;
+        //Collector(const Collector&) = delete;
 //        void operator=(const Collector &)=delete;
 
-        //Collector();
-        static Collector& getInstance();
+        Collector();
+        //static Collector& getInstance();
 
         bool isEmpty();
 
         bool find_memory();
 
-        void insert(void *pointer);
+        void insert(Node* pointer);
 
         Node collector_delete();
+
+        void print_collector();
 
         //CollectorNode *getHead() const;
 
@@ -52,6 +54,6 @@ class Collector {
     //Collector();
 };
 
-Collector Collector::instance;
+//Collector Collector::instance;
 
 #endif //EXTRACLASE1_DATOS2_COLLECTOR_H
