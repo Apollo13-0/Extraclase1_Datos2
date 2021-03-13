@@ -27,7 +27,7 @@ class Collector {
     public:
 
         //Collector(const Collector&) = delete;
-//        void operator=(const Collector &)=delete;
+        void operator=(const Collector &)=delete;
 
         Collector();
         //static Collector& getInstance();

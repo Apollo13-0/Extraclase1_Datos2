@@ -42,7 +42,7 @@ void List::insert(int data, Collector collector){
     // pasarlo al new sobreescrito
     if (is_empty()){
         if (collector.find_memory()){
-            cout<<"l1 vaciaaaaaaa"<< endl;
+            //cout<<"colle ineseee"<< &collector<< endl;
             Node *tmp = new Node(data);
             this->head = tmp;
         } else{
@@ -52,11 +52,12 @@ void List::insert(int data, Collector collector){
         }
     } else {
         if (collector.find_memory()){
+            //cout<<"colle ineseee"<< &collector<< endl;
             Node *new_node = new Node(data);
             new_node->setPtrNext(head);
             this->head = new_node;
         } else{
-            cout << "insertt-------------------------------------------------------------*****"<< endl;
+            //cout << "insertt-------------------------------------------------------------*****"<< endl;
             Node tmp3 = collector.collector_delete();
             tmp3.setValue(data);
             tmp3.setPtrNext(head);
@@ -108,9 +109,11 @@ void List::delete_list(int value, Collector collector) {
                 if (tmp == this->head){
                     this->head = this->head->getPtrNext();
                     collector.insert(tmp);
+                    //cout << "collector:  " << &collector<<endl;
                 } else {
                     tmp2->setPtrNext(tmp->getPtrNext());
                     collector.insert(tmp);
+                    //cout << "collector:  " << &collector<<endl;
                 }
                 //cout << "Nodo eliminado:   "<< tmp<< endl;
 

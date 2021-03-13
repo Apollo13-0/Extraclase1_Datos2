@@ -29,13 +29,13 @@ bool Collector::find_memory() {
 }
 
 void Collector::insert(Node* data) {
-    if (isEmpty()){
+    if (this->isEmpty()){
         this->head = data;
-        cout << "collector insert is empty  " << head <<endl;
+        //cout << "collector insert is empty  " << head <<endl;
     } else {
         data->setPtrNext(head);
         this->head = data;
-        cout << "collector insert new head" << endl;
+        //cout << "collector insert new head" << endl;
     }
     size++;
 }
@@ -57,7 +57,7 @@ void Collector::setSize(int size) {
 }
 
 Node Collector::collector_delete() {
-    cout << "print delle   " << head << endl;
+    //cout << "print delle   " << head << endl;
     Node *tmp3 = head;
     head = tmp3->getPtrNext();
     tmp3->setPtrNext(NULL);
@@ -78,8 +78,8 @@ Node Collector::collector_delete() {
 
 void Collector::print_collector() {
     Node *tmp = this->head;
-    cout << "print collecitor   " << this->head << endl;
-    if (isEmpty()){
+    //cout << "print collecitor   " << this->head << endl;
+    if (!this->head){
         cout<<"EL collector està vacìo"<<endl;
     } else {
         while (tmp != NULL){
